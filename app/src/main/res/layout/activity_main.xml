@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="32dp"
+    android:paddingTop="16dp">
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorButtonOrange"
+        android:text="@string/button_reset"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/team_a_2"
+        style="@style/PointButtonStyle"
+        android:text="@string/button_2points"
+        app:layout_constraintBottom_toTopOf="@+id/team_a_free"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_a_3" />
+
+    <Button
+        android:id="@+id/team_a_free"
+        style="@style/PointButtonStyle"
+        android:text="@string/button_freethrow"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_a_2" />
+
+    <Button
+        android:id="@+id/team_a_3"
+        style="@style/PointButtonStyle"
+        android:text="@string/button_3points"
+        app:layout_constraintBottom_toTopOf="@+id/team_a_2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_a_score" />
+
+    <Button
+        android:id="@+id/team_b_3"
+        style="@style/PointButtonStyle"
+        android:text="@string/button_3points"
+        app:layout_constraintBottom_toTopOf="@+id/team_b_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/team_b_score" />
+
+    <Button
+        android:id="@+id/team_b_2"
+        style="@style/PointButtonStyle"
+        android:text="@string/button_2points"
+        app:layout_constraintBottom_toTopOf="@+id/team_b_free"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/team_b_3" />
+
+    <Button
+        android:id="@+id/team_b_free"
+        style="@style/PointButtonStyle"
+        android:text="@string/button_freethrow"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/team_b_2" />
+
+    <TextView
+        android:id="@+id/team_a"
+        style="@style/TeamTextViewStyle"
+        android:text="@string/textview_teamA"
+        app:layout_constraintBottom_toTopOf="@+id/team_a_score"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/team_a_score"
+        style="@style/ScoreTextViewStyle"
+        android:text="@string/zero"
+        app:layout_constraintBottom_toTopOf="@+id/team_a_3"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_a" />
+
+    <TextView
+        android:id="@+id/team_b"
+        style="@style/TeamTextViewStyle"
+        android:text="@string/textview_teamB"
+        app:layout_constraintBottom_toTopOf="@+id/team_b_score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_b_score"
+        style="@style/ScoreTextViewStyle"
+        android:text="@string/zero"
+        app:layout_constraintBottom_toTopOf="@+id/team_b_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/team_b" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

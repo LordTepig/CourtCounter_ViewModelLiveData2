@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CourtCounter_ViewModelLiveData2</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_freethrow">Free Throw</string>
+    <string name="button_2points">+2 Points</string>
+    <string name="button_3points">+3 Points</string>
+    <string name="textview_teamA">Team A</string>
+    <string name="textview_teamB">Team B</string>
+    <string name="zero">0</string>
+</resources>
